@@ -20,21 +20,21 @@ public class GameRenderer {
     private ImageIcon shiftImage;
     
     public GameRenderer() {
-        loadImages();
+        loadAssets();
     }
     
-    private void loadImages() {
+    private void loadAssets() {
         try {
-            titleImage = new ImageIcon("images/title.png");
-            arrowImage = new ImageIcon("images/keyboardArrow.png");
-            shiftImage = new ImageIcon("images/shift.png");
+            titleImage = new ImageIcon("assets/title.png");
+            arrowImage = new ImageIcon("assets/keyboardArrow.png");
+            shiftImage = new ImageIcon("assets/shift.png");
             
-            snakeHead = scaleImage(new ImageIcon("images/snakeHead.png"), GameConfig.GRID_SIZE, GameConfig.GRID_SIZE);
-            snakeBody = scaleImage(new ImageIcon("images/snakeBody.png"), GameConfig.GRID_SIZE, GameConfig.GRID_SIZE);
-            appleImage = scaleImage(new ImageIcon("images/apple.png"), GameConfig.GRID_SIZE, GameConfig.GRID_SIZE);
-            bombImage = scaleImage(new ImageIcon("images/bomb.png"), GameConfig.GRID_SIZE, GameConfig.GRID_SIZE);
+            snakeHead = scaleImage(new ImageIcon("assets/snakeHead.png"), GameConfig.GRID_SIZE, GameConfig.GRID_SIZE);
+            snakeBody = scaleImage(new ImageIcon("assets/snakeBody.png"), GameConfig.GRID_SIZE, GameConfig.GRID_SIZE);
+            appleImage = scaleImage(new ImageIcon("assets/apple.png"), GameConfig.GRID_SIZE, GameConfig.GRID_SIZE);
+            bombImage = scaleImage(new ImageIcon("assets/bomb.png"), GameConfig.GRID_SIZE, GameConfig.GRID_SIZE);
         } catch (Exception e) {
-            System.err.println("Error loading images: " + e.getMessage());
+            System.err.println("Error loading assets: " + e.getMessage());
         }
     }
 
